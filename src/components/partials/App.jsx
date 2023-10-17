@@ -34,6 +34,10 @@ const App = () => {
 
       temp[0].innerHTML = Math.floor(data.main.temp)+"°";
       type[0].innerHTML = data.weather[0].main;
+
+      const place = document.getElementsByClassName("place");
+
+      place[0].innerHTML = input[0].value;
     }
   }
 
@@ -56,6 +60,7 @@ const App = () => {
           <div className="py-5">
             <h1 className="temp text-5xl">20℃</h1>
             <p className="type text-xl">Clear Sky</p>
+            <p className="place text-xl">India</p>
           </div>
         </div>
         <div className="flex">
