@@ -52,7 +52,7 @@ const App = () => {
           <div className="flex gap-7 my-10 p-5 bg-green-400 dark:bg-green-700 rounded-xl">
             <li className="font-mono text-2xl list-none"><BsFillMoonFill className="cursor-pointer" onClick={()=>setDarkMode(!darkMode)}/></li>
             <div className="flex gap-7">
-              <input type="text" className="input font-mono border-none outline-none rounded-lg"/>
+              <input type="text" className="input font-mono dark:text-black border-none outline-none rounded-lg"/>
               <button >
                 <IoSearchOutline className="text-2xl" onClick={search}/>
               </button>
