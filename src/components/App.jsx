@@ -22,18 +22,15 @@ const App = () => {
       const response = await fetch(URL);
       const data = await response.json();
 
-      const response2 = await fetch(URL2);
-      const data2 = await response2.json();
-
       const humidity = document.getElementsByClassName("humidity");
       const wind = document.getElementsByClassName("wind");
-      const uv = document.getElementsByClassName("uv");
+      const low = document.getElementsByClassName("low");
       const feels = document.getElementsByClassName("feels");
 
-      humidity[0].innerHTML = Math.ceil(data.main.humidity);
-      wind[0].innerHTML = Math.ceil(data.wind.speed);
-      uv[0].innerHTML = (data2.current.uv);
-      feels[0].innerHTML = Math.ceil(data.main.feels_like);
+      humidity[0].innerHTML = Math.ceil(data.main.humidity)+"%";
+      wind[0].innerHTML = Math.ceil(data.wind.speed)+"kph";
+      low[0].innerHTML = Math.ceil(data.main.temp_min)+"°";
+      feels[0].innerHTML = Math.ceil(data.main.feels_like)+"°";
 
       const temp = document.getElementsByClassName("temp");
       const type = document.getElementsByClassName("type");
@@ -74,7 +71,7 @@ const App = () => {
               </div>
             </div>
             <div className="flex">
-              <div className="flex justify-between my-5 p-5 gap-10">
+              <div className="flex justify-between my-5 p-5 gap-8">
                 <div className="flex gap-2">
                   <img src="" alt="" />
                   <img className="h-[42px]" src={humidity} alt="" />
@@ -93,12 +90,12 @@ const App = () => {
               </div>
             </div>
             <div className="flex">
-              <div className="flex justify-between my-5 p-5 gap-20">
+              <div className="flex justify-between my-5 p-5 gap-14">
                 <div className="flex gap-2">
                   <img className="h-[42px]" src={uv} alt="" />
                   <div>
-                    <h1 className="uv text-xl">3</h1>
-                    <p>UV</p>
+                    <h1 className="low text-xl">3°</h1>
+                    <p>Lowest</p>
                   </div>
                 </div>
                 <div className="flex gap-2">
