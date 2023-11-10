@@ -84,9 +84,9 @@ const App = () => {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="w-[360px] flex flex-col justify-center align-middle m-auto mt-20 dark:bg-gray-400 bg-zinc-200 rounded-xl dark:text-white select-none">
+      <div className="w-[360px] flex flex-col justify-center align-middle m-auto mt-20 shadow-2xl bg-gradient-to-bl from-green-300 to-yellow-200 rounded-xl dark:from-slate-200 dark:to-slate-400 dark:text-white select-none">
         <div className="w-[340px] m-auto">
-          <div className="flex gap-7 my-10 p-5 bg-green-400 dark:bg-green-700 rounded-xl">
+          <div className="flex gap-7 my-10 p-5 shadow-xl bg-green-400 dark:bg-slate-500 rounded-xl">
             <li className="font-mono text-2xl list-none">
               <BsFillMoonFill
                 className="cursor-pointer"
@@ -103,7 +103,7 @@ const App = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col mb-5 p-5 bg-green-400 dark:bg-green-700 rounded-xl">
+          <div className="flex flex-col mb-5 p-5 shadow-xl bg-green-400 dark:bg-slate-500 rounded-xl">
             <div className="gap-5 flex">
               <div>
                 <img className="iconmg" src={`icons/${icon}.png`} alt="" />
