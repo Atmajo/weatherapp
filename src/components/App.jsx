@@ -39,7 +39,7 @@ const App = () => {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
 
-      const uri = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api}&units=metric`;
+      const uri = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=a0e9da674faffcda28aede6a39250e7e&units=metric`;
 
       fetch(uri)
         .then((response) => response.json())
@@ -64,7 +64,7 @@ const App = () => {
     if (input[0].value === "") {
       return 0;
     } else {
-      const URL = `https://api.openweathermap.org/data/2.5/weather?appid=${api}&q=${input[0].value}&units=metric`;
+      const URL = `https://api.openweathermap.org/data/2.5/weather?appid=a0e9da674faffcda28aede6a39250e7e&q=${input[0].value}&units=metric`;
       const response = await fetch(URL);
       const data = await response.json();
 
