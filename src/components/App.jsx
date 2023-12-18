@@ -7,7 +7,7 @@ import feel from "./assests/feels.png";
 import { BsFillMoonFill } from "react-icons/bs";
 
 const App = () => {
-  const api = "7e3cfe148314588f0fb226f55d5943f4";
+  const api = "a0e9da674faffcda28aede6a39250e7e";
 
   const [darkMode, setDarkMode] = useState(false);
   const [icon, setIcon] = useState("01d");
